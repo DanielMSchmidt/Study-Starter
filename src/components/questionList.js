@@ -12,7 +12,7 @@ class QuestionList extends React.Component {
           {
             this.props.questions.map(question => (
               <li>
-                <Question/>
+                <Question {...question}/>
               </li>
             ))
           }

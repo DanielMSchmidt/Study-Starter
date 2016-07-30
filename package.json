@@ -29,6 +29,7 @@
   "author": "Evon Binns",
   "license": "MIT",
   "dependencies": {
+    "babel-plugin-transform-es2015-spread": "^6.8.0",
     "object-assign": "4.1.0",
     "react": "15.2.1",
     "react-dom": "15.2.1",
