@@ -1,18 +1,9 @@
 export default {
-  fuelSavings: {
-    newMpg: '',
-    tradeMpg: '',
-    newPpg: '',
-    tradePpg: '',
-    milesDriven: '',
-    milesDrivenTimeframe: 'week',
-    displayResults: false,
-    dateModified: null,
-    necessaryDataIsProvidedToCalculateSavings: false,
-    savings: {
-      monthly: 0,
-      annual: 0,
-      threeYear: 0
-    }
+  questions: {
+    data: [{
+      question: 'What is sin(A+B)?',
+      options: ['sin(A)+sin(B)', 'sin(A)+cos(B)', 'sin(A)cos(B)+cos(A)sin(B)', 'sin(A)sin(B)'],
+      answer: 2
+    }]
   }
 };
