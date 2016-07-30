@@ -1,18 +1,27 @@
 import React from 'react';
 import {Link} from 'react-router';
+import {connect} from 'react-redux';
+import Question from './question';
 
-const QuestionList = () => {
-  return (
-    <div>
-      <h1>React Slingshot</h1>
+class QuestionList extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>All Questions</h1>
+        <ul>
+          {
+            this.props.questions.map(question => (
+              <li>
+                <Question/>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    );
+  }
+}
 
-      <h2>Get Startesasdasdasdd</h2>
-      <ol>
-        <li>Review the <Link to="fuel-savings">demo app</Link></li>
-        <li>Remove the demo and start coding: npm run remove-demo</li>
-      </ol>
-    </div>
-  );
-};
-
-export default QuestionList;
+export default connect(state => ({
+  questions: state.questions.data
+}))(QuestionList)
