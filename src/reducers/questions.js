@@ -1,4 +1,4 @@
-import {SAVE_FUEL_SAVINGS, CALCULATE_FUEL_SAVINGS} from '../constants/actionTypes';
+import {ADD_QUESTION} from '../constants/actionTypes';
 import initialState from './initialState';
 
 // IMPORTANT: Note that with Redux, state should NEVER be changed.
@@ -8,6 +8,12 @@ import initialState from './initialState';
 // and update values on the copy.
 export default function questions(state = initialState.questions, action) {
   switch (action.type) {
+    case ADD_QUESTION:
+      return {
+        ...state,
+        data: [...state.data, action.data],
+
+      }
 
     default:
       return state;

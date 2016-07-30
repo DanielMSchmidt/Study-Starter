@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router';
 import {connect} from 'react-redux';
 import Question from './question';
+import {addQuestion} from '../actions/questions';
 
 class QuestionList extends React.Component {
   render() {
@@ -17,6 +18,7 @@ class QuestionList extends React.Component {
             ))
           }
         </ul>
+        <a onClick={this.props.addQuestion}>Create New Question</a>
       </div>
     );
   }
@@ -24,4 +26,6 @@ class QuestionList extends React.Component {
 
 export default connect(state => ({
   questions: state.questions.data
-}))(QuestionList)
+}), {
+  addQuestion
+})(QuestionList)
