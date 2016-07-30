@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router';
+// import {Link} from 'react-router';
 import {connect} from 'react-redux';
 import Question from './question';
 import {addQuestion} from '../actions/questions';

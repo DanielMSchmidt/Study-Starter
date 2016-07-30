@@ -11,7 +11,7 @@ export default function questions(state = initialState.questions, action) {
     case ADD_QUESTION:
       return {
         ...state,
-        data: [...state.data, action.data],
+        data: [...state.data, action.data]
 
       }
 

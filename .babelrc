@@ -4,7 +4,7 @@
     "react",
     "stage-1"
   ],
-  "plugins": ["transform-es2015-spread"],
+  "plugins": ["transform-es2015-spread", "transform-class-properties"],
   "env": {
     "development": {
       "presets": [

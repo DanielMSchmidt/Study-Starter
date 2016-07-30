@@ -1,8 +1,12 @@
 import React from 'react';
-import styles from './question.scss';
-
+import './question.scss';
 
 class Question extends React.Component {
+  static propTypes = {
+    answer: React.PropTypes.number,
+    options: React.PropTypes.array,
+    question: React.PropTypes.string,
+  }
   render() {
     const {
       answer,
