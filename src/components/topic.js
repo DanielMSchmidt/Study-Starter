@@ -6,7 +6,7 @@ import QuestionList from './questionList';
 class Topic extends React.Component {
   render() {
     return (
-      <div class="topic">
+      <div className="topic">
         <h2> Algebra </h2>
         <a>Set PreRequisite</a>
         <QuestionList/>

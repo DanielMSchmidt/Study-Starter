@@ -6,7 +6,7 @@ import initialState from './initialState';
 // create a copy of the state passed and set new values on the copy.
 // Note that I'm using Object.assign to create a copy of current state
 // and update values on the copy.
-export default function questions(state = initialState.quiz.topics.questions, action) {
+export default function questions(state = initialState.questions, action) {
   switch (action.type) {
     case ADD_QUESTION:
       return {

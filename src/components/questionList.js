@@ -7,7 +7,7 @@ import {addQuestion} from '../actions/questions';
 class QuestionList extends React.Component {
   render() {
     return (
-      <div class="question-list">
+      <div className="question-list">
         <ul>
         {
           this.props.questions.map(question => (

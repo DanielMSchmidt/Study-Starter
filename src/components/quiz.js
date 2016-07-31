@@ -6,7 +6,7 @@ import Topic from './topic';
 class Quiz extends React.Component {
   render() {
     return (
-      <div class="quiz">
+      <div className="quiz">
         <h1> Quiz 123465 </h1>
         <Topic/>
         <Topic/>
