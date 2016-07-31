@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
-import questions from './questions';
+import quiz from './quiz';
 import {routerReducer} from 'react-router-redux';
 
 const rootReducer = combineReducers({
-  questions,
+  quiz,
   routing: routerReducer
 });
 

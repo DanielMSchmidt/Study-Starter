@@ -6,12 +6,25 @@ import initialState from './initialState';
 // create a copy of the state passed and set new values on the copy.
 // Note that I'm using Object.assign to create a copy of current state
 // and update values on the copy.
-export default function questions(state = initialState.questions, action) {
+export default function quiz(state = initialState.quiz, action) {
   switch (action.type) {
     case ADD_QUESTION:
+      var thisTopic = state.topics.find(topic => topic.id === action.topicId);
+      var otherTopics = state.topics.filter(topic => topic.id !== action.topicId);
+
+      debugger;
       return {
         ...state,
-        data: [...state.data, action.data]
+        topics: [
+          ...otherTopics,
+          {
+            ...thisTopic,
+            questions: [
+              ...thisTopic.questions,
+              action.data
+            ]
+          }
+        ]
       }
 
     default:

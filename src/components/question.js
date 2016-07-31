@@ -1,18 +1,20 @@
 import React from 'react';
 import './question.scss';
 
-class Question extends React.Component {
+export default class Question extends React.Component {
   static propTypes = {
     answer: React.PropTypes.number,
     options: React.PropTypes.array,
     question: React.PropTypes.string,
   }
+
   render() {
     const {
       answer,
       options,
       question,
     } = this.props;
+
     return (
       <div className="question">
         <p>{question}</p>
@@ -23,5 +25,3 @@ class Question extends React.Component {
     );
   }
 }
-
-export default Question;
