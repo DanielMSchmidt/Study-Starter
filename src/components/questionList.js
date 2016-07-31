@@ -7,16 +7,16 @@ import {addQuestion} from '../actions/questions';
 class QuestionList extends React.Component {
   render() {
     return (
-      <div>
-        <h1>All Questions</h1>
+      <div class="question-list">
         <ul>
-          {
-            this.props.questions.map(question => (
-              <li>
-                <Question {...question}/>
-              </li>
-            ))
-          }
+        {
+          this.props.questions.map(question => (
+            <li>
+            <Question {...question}/>
+            <a>Delete</a>
+            </li>
+          ))
+        }
         </ul>
         <a onClick={this.props.addQuestion}>Create New Question</a>
       </div>

@@ -12,7 +12,6 @@ export default function questions(state = initialState.questions, action) {
       return {
         ...state,
         data: [...state.data, action.data]
-
       }
 
     default:
