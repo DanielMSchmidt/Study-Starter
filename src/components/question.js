@@ -14,7 +14,7 @@ class Question extends React.Component {
       question,
     } = this.props;
     return (
-      <div class="question">
+      <div className="question">
         <p>{question}</p>
         <ul>{options.map((option, index) => (
             <li key={index} className={index === answer ? 'correct' : ''}>{option}</li>

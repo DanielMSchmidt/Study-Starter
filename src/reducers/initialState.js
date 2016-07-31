@@ -24,7 +24,7 @@ export default {
 				'questions': {
 					'data': [
 						{
-							'answer': '2',
+							'answer': 2,
 							'options': [
 								'sin(A) + sin(B)',
 								'sin(A) + cos(B)',
