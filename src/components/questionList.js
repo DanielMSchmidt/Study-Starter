@@ -6,11 +6,19 @@ import {addQuestion} from '../actions/questions';
 
 class QuestionList extends React.Component {
   render() {
+    const {
+      topicId,
+      questions,
+    } = this.props;
+
+    // TODO: get a guaranteed uniqe Id from somewhere
+    var questionId = Math.round(Math.random() * 1000);
+
     return (
       <div className="question-list">
         <ul>
         {
-          this.props.questions.map(question => (
+          questions.map(question => (
             <li>
             <Question {...question}/>
             <a>Delete</a>
@@ -18,14 +26,13 @@ class QuestionList extends React.Component {
           ))
         }
         </ul>
-        <a onClick={this.props.addQuestion}>Create New Question</a>
+        <a onClick={() => this.props.addQuestion(topicId, questionId)}>Create New Question</a>
       </div>
     );
   }
 }
 
 export default connect(state => ({
-  questions: state.questions.data
 }), {
   addQuestion
 })(QuestionList)
